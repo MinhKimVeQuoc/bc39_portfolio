@@ -1,0 +1,196 @@
+* {
+    font-size: 16px;
+}
+
+header .logo i {
+    color: green;
+    font-size: 2.5rem;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    /* cho header có z-index là 1 để header hiển thị / nằm trên trên carousel vì carousel bên js là position: relative */
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .logo span {
+    font-size: 2rem;
+}
+
+.menu .nav-item {
+    margin: 0 0.8rem;
+}
+
+.menu .nav-item a::after {
+    /* [ content ]: luôn đi kèm khi tạo affter. người dùng có thể cho giá trị cho content */
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: green;
+    transition: all 0.5s;
+}
+
+/* cố định thẻ a  trang chủ home có màu xanh */
+.menu .nav-item.active a::after {
+    width: 100%;
+    color: green;
+}
+
+/* hover các thẻ có màu xanh */
+.menu .nav-item:hover a::after {
+    width: 100%;
+}
+
+.menu .nav-item.active a {
+    /* !important quan trọng ưu tiên đè lên css của boostrap4 */
+    color: green !important;
+}
+
+.menu .nav-item:hover a {
+    color: green !important;
+}
+
+/* CAROUSEL */
+.carousel-item {
+    /* 100vh giúp ảnh của carousel tràn full màn hình */
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(../img/finland.jpg);
+
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(../img/mountains.jpg);
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(../img/mountains-1.jpg);
+}
+
+.carousel__thumb {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.carousel__thumb img {
+    border-radius: 50%;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%
+}
+
+.carousel-indicators li.active {
+    background-color: green;
+}
+
+/* PROJECT */
+
+
+#project .project__title {
+    text-align: center;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #35a22c;
+}
+
+
+
+.project__content .card-body {
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px #000033;
+    transition: all 0.1s;
+}
+
+.project__content .card {
+    /* [ overflow ]: cắt / loại bỏ phần dư vượt khỏi khung của thẻ cha */
+    height: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 0 30px 30px;
+} 
+
+.project__content .card:hover h4 {
+    color: green;
+}
+
+.project__content .card h4 {
+    font-weight: 500;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.project__content .card:hover .card-body {
+    border-color: yellowgreen;
+    border-top-color: transparent;
+    border-radius: 0 0 30px 30px;
+}
+
+/* service */
+#service{
+    background-image: url(../img/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#service .overplay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000063;
+}
+
+#service .service__title{
+    position: relative;
+}
+
+.service__content .card{
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #ffffff2b;
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: all 0.5s;
+}
+
+.service__content .card:hover{
+    background-color: black;
+}
+
+
+.service__content .card-body{
+    text-align: center;
+}
+
+
+.service__content .card-body i{
+    font-size: 30px;
+    color: green;
+}
